@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Viewport Metatag  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--User agent reset  -->
+  <link href=".resources/CSS/reset.css" type="text/css" rel="stylesheet">
+  <!-- Bootstrap CDN-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- stylesheet -->
+  <link href="./resources/CSS/index.css" type="text/css" rel="stylesheet">
+
+  <!-- fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900" rel="stylesheet">
+
+  <!-- favicon  -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+
+  <!-- title -->
+  <title>Match Game</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="instructions col-sm-4 col-xs-12">
+        <h1 class="title">Match Game</h1>
+        <p class="subtitle">Rules</p>
+        <p class="text">Click on a card to reveal the number on the other side. Click on a second card to try and find a match to the first. If you succeed, the pair will be removed from play. If not, try again!</p>
+        <p class="subtitle">How to win</p>
+        <p class="text">You win when all pairs have been found.</p>
+      </div>
+      <div id="game" class="game col-sm-8 col-xs-12">
+        <div class="row game_grid">
+          <div class="card">
+            <span class="number">8<span>
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+          <div class="card">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Jquery  -->
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./resources/js/match-game.js"></script>
+  <script type="text/javascript" src="./resources/js/tests.js"></script>
+</body>
+</html>
