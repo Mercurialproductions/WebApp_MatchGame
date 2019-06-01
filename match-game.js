@@ -44,6 +44,10 @@ get status() {
   return this._isFlipped;
 }
 
+// set status() {
+//   this._isFlipped = true;
+// }
+
 selectColor() {
 
   switch(this.value) {
@@ -117,7 +121,79 @@ cardSixteen.selectColor();
 
 //testing
 
-document.getElementById("cardOne").textContent = cardOne.value;
+const notFlippedBgColor = 'rgb(32,64,86)'
+
+// function flip(){
+//   const tile = document.getElementById('x');
+//   const tileContent = document.getElementById("tileOne");
+//   //event.target.firstChild.innerText = cardOne.value;
+//   tileContent.innerText = cardOne.value;
+//   tile.style.backgroundColor =  cardOne.color;
+//   cardOne._isFlipped = true;
+// }
+
+let flip = function(event){
+  const target = event.target;
+  const tileValue = target.getAttribute('id');
+  let card;
+  switch(tileValue){
+    case 'tileOne':
+      card = cardOne;
+      break;
+    case 'tileTwo':
+      card = cardTwo;
+      break;
+    case 'tileThree':
+      card = cardThree;
+      break;
+    case 'tileFour':
+      card = cardFour;
+      break;
+    case 'tileFive':
+      card = cardFive;
+      break;
+    case 'tileSix':
+      card = cardSix;
+      break;
+    case 'tileSeven':
+      card = cardSeven;
+      break;
+    case 'tileEight':
+      card = cardEight;
+      break;
+    case 'tileNine':
+      card = cardNine;
+      break;
+    case 'tileTen':
+      card = cardTen;
+      break;
+    case 'tileEleven':
+      card = cardEleven;
+      break;
+    case 'tileTwelve':
+      card = cardTwelve;
+      break;
+    case 'tileThirteen':
+      card = cardThirteen;
+      break;
+    case 'tileFourteen':
+      card = cardFourteen;
+      break;
+    case 'tileFifteen':
+      card = cardFifteen;
+      break;
+    case 'tileSixteen':
+      card = cardSixteen;
+      break;
+  }
+  target.innerHTML = card.value;
+  target.style.backgroundColor =  card.color;
+  cardOne._isFlipped = true;
+}
+
+
+
+
 
 
 

@@ -34,38 +34,37 @@
       </div>
       <div id="game" class="game col-sm-8 col-xs-12">
         <div class="row game_grid">
-          <div class="card">
-            <span id = "cardOne" class="number">8<span>
+          <div id="tileOne" class="card number" >
           </div>
-          <div class="card">
+          <div id="tileTwo" class="card number">
           </div>
-          <div class="card">
+          <div id="tileThree" class="card number">
           </div>
-          <div class="card">
+          <div id="tileFour" class="card number">
           </div>
-          <div class="card">
+          <div id="tileFive" class="card number">
           </div>
-          <div class="card">
+          <div id="tileSix" class="card number">
           </div>
-          <div class="card">
+          <div id="tileSeven" class="card number">
           </div>
-          <div class="card">
+          <div id="tileEight" class="card number">
           </div>
-          <div class="card">
+          <div id="tileNine" class="card number">
           </div>
-          <div class="card">
+          <div id="tileTen" class="card number">
           </div>
-          <div class="card">
+          <div id="tileEleven" class="card number">
           </div>
-          <div class="card">
+          <div id="tileTwelve" class="card number">
           </div>
-          <div class="card">
+          <div id="tileThirteen" class="card number">
           </div>
-          <div class="card">
+          <div id="tileFourteen" class="card number">
           </div>
-          <div class="card">
+          <div id="tileFifteen" class="card number">
           </div>
-          <div class="card">
+          <div id="tileSixteen" class="card number">
           </div>
         </div>
       </div>
@@ -78,7 +77,49 @@
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="./resources/js/match-game.js"></script>
+  <script type="text/javascript" src="match-game.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
+  <script type="text/javascript" src="./try.js"></script>
+  <script>
+
+
+
+
+    const tOne = document.getElementById('tileOne');
+    tOne.onclick = flip;
+    const tTwo = document.getElementById('tileTwo');
+    tTwo.onclick = flip;
+    const tThree = document.getElementById('tileThree');
+    tThree.onclick = flip;
+    const tFour = document.getElementById('tileFour');
+    tFour.onclick = flip;
+    const tFive = document.getElementById('tileFive');
+    tFive.onclick = flip;
+    const tSix = document.getElementById('tileSix');
+    tSix.onclick = flip;
+    const tSeven = document.getElementById('tileSeven');
+    tSeven.onclick = flip;
+    const tEight = document.getElementById('tileEight');
+    tEight.onclick = flip;
+    const tNine = document.getElementById('tileNine');
+    tNine.onclick = flip;
+    const tTen = document.getElementById('tileTen');
+    tTen.onclick = flip;
+    const tEleven = document.getElementById('tileEleven');
+    tEleven.onclick = flip;
+    const tTwelve = document.getElementById('tileTwelve');
+    tTwelve.onclick = flip;
+    const tThirteen = document.getElementById('tileThirteen');
+    tThirteen.onclick = flip;
+    const tFourteen = document.getElementById('tileFourteen');
+    tFourteen.onclick = flip;
+    const tFifteen = document.getElementById('tileFifteen');
+    tFifteen.onclick = flip;
+    const tSixteen = document.getElementById('tileSixteen');
+    tSixteen.onclick = flip;
+
+
+  </script>
+
 </body>
 </html>

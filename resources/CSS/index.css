@@ -61,13 +61,15 @@ body {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   cursor:pointer;
+
 }
 
 .card_turned {
-  border: 8px solid #ffffff;
-  border-radius: 5%;
+
+
+
 }
 
 .cards_match {
