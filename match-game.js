@@ -218,10 +218,12 @@ function turn(target, card){
     secondTileTurned = target;
     turns = 0;
 
+    const tile1 = document.getElementById(firstTileTurned);
+    const tile2 = document.getElementById(secondTileTurned);
+
     if(cardOneValue !== cardTwoValue){
 
-      const tile1 = document.getElementById(firstTileTurned);
-      const tile2 = document.getElementById(secondTileTurned);
+
 
       tile1.classList.add("missmatch");
       tile2.classList.add("missmatch");
@@ -238,7 +240,7 @@ function turn(target, card){
         tile2.style.backgroundColor = notFlippedBgColor;
         tile2.innerHTML="";
 
-      },1000);
+      },700);
 
       console.log("second " + turns);
 
@@ -248,6 +250,9 @@ function turn(target, card){
       cardTwoValue = '';
 
 
+    } else if(cardOneValue === cardTwoValue){
+      tile2.classList.add("match");
+      tile1.classList.add("match");
     }
   }
 
