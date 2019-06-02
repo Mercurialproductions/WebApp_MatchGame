@@ -121,20 +121,18 @@ cardSixteen.selectColor();
 
 //testing
 
-const notFlippedBgColor = 'rgb(32,64,86)'
+//the original background color of unflipped tile
 
-// function flip(){
-//   const tile = document.getElementById('x');
-//   const tileContent = document.getElementById("tileOne");
-//   //event.target.firstChild.innerText = cardOne.value;
-//   tileContent.innerText = cardOne.value;
-//   tile.style.backgroundColor =  cardOne.color;
-//   cardOne._isFlipped = true;
-// }
 
+/*
+*This function flips the tile when clicked on and reveals its value
+* @param takes in the click event as an object
+ */
 let flip = function(event){
+
   const target = event.target;
   const tileValue = target.getAttribute('id');
+
   let card;
   switch(tileValue){
     case 'tileOne':
@@ -186,10 +184,69 @@ let flip = function(event){
       card = cardSixteen;
       break;
   }
-  target.innerHTML = card.value;
-  target.style.backgroundColor =  card.color;
-  cardOne._isFlipped = true;
+  if(card._isFlipped !== true){
+
+    target.innerHTML = card.value;
+    target.style.backgroundColor =  card.color;
+    card._isFlipped = true;
+    turn(tileValue,card);
+
+  }
+
 }
+
+//counter and check function
+
+let turns = 0;
+let cardOneValue;
+let cardTwoValue;
+let firstTileTurned;
+let secondTileTurned;
+const notFlippedBgColor = 'rgb(32,64,86)'
+let previousCard;
+
+function turn(target, card){
+  if(turns === 0 && turns < 1){
+    previousCard = card;
+    cardOneValue = card.value;
+    firstTileTurned = target;
+    console.log("first " + turn);
+    turns = 1;
+
+  } else if(turns === 1 && turns !== 0) {
+    cardTwoValue = card.value;
+    secondTileTurned = target;
+    turns = 0;
+
+    if(cardOneValue !== cardTwoValue){
+
+
+
+
+      setTimeout(()=>{
+
+        document.getElementById(firstTileTurned).style.backgroundColor = notFlippedBgColor;
+        document.getElementById(firstTileTurned).innerHTML="";
+
+        document.getElementById(secondTileTurned).style.backgroundColor = notFlippedBgColor;
+        document.getElementById(secondTileTurned).innerHTML="";
+
+      },1000);
+
+      console.log("second " + turns);
+
+      previousCard._isFlipped = false;
+      card._isFlipped = false;
+      cardOneValue = '';
+      cardTwoValue = '';
+
+
+    }
+  }
+
+}
+
+
 
 
 
