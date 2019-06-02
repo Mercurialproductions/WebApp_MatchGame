@@ -220,16 +220,23 @@ function turn(target, card){
 
     if(cardOneValue !== cardTwoValue){
 
+      const tile1 = document.getElementById(firstTileTurned);
+      const tile2 = document.getElementById(secondTileTurned);
 
+      tile1.classList.add("missmatch");
+      tile2.classList.add("missmatch");
 
 
       setTimeout(()=>{
 
-        document.getElementById(firstTileTurned).style.backgroundColor = notFlippedBgColor;
-        document.getElementById(firstTileTurned).innerHTML="";
 
-        document.getElementById(secondTileTurned).style.backgroundColor = notFlippedBgColor;
-        document.getElementById(secondTileTurned).innerHTML="";
+        tile1.classList.remove("missmatch");
+        tile2.classList.remove("missmatch");
+        tile1.style.backgroundColor = notFlippedBgColor;
+        tile1.innerHTML="";
+
+        tile2.style.backgroundColor = notFlippedBgColor;
+        tile2.innerHTML="";
 
       },1000);
 
