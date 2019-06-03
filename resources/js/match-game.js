@@ -1,3 +1,5 @@
+//var $ = require('jQuery');
+
 var MatchGame = {};
 
 
@@ -253,6 +255,9 @@ function turn(target, card){
     } else if(cardOneValue === cardTwoValue){
       tile2.classList.add("match");
       tile1.classList.add("match");
+
+      //$('#tileOne').animate({backgroundColor:'white'},500);
+
     }
   }
 
@@ -264,56 +269,3 @@ function turn(target, card){
 
 
 
-
-
-
-/*
-  Converts card values to jQuery card objects and adds them to the supplied game
-  object.
-*/
-
-
-
-//jquery stuff
-
-
-// MatchGame.renderCards = function(cardValues, $game) {
-//
-//   var color = ['hsl(25,85%,65%)', 'hsl(55, 85%, 65%)', 'hsl(90, 85%, 65%)', 'hsl(220, 85%, 65%)', 'hsl(160, 85%, 65%)', 'hsl(265, 85%, 65%)', 'hsl(310, 85%, 65%)', 'hsl(360, 85%, 65%)'];
-//
-//   var value = MatchGame.generateCardValues();
-//
-//   $game.empty();
-//   $game.data('flippedCards', []);
-//
-// for(var i = 0; i < color.length; i++) {
-//   var Value = value[i];
-//   var Color = color[(Value - 1)];
-//   var data = {
-//       cardValue: Value,
-//       cardColor: Color,
-//       isFlipped: false
-//   };
-//
-//   var $cardElement = $('<div class="card"></div>');
-//   $cardElement.data(data);
-//
-//   $game.append($cardElement);
-//
-//
-// };
-//
-// $('.card').click(function() {
-//   MatchGame.flipCard($(this), $('#game'));
-// });
-//
-// };
-//
-// /*
-//   Flips over a given card and checks to see if two cards are flipped over.
-//   Updates styles on flipped cards depending whether they are a match or not.
-//  */
-//
-// MatchGame.flipCard = function($card, $game) {
-//
-// };
